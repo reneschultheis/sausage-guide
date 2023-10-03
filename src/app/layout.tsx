@@ -1,9 +1,22 @@
 import "./globals.css"
 import type {Metadata} from "next"
-import {Inter} from "next/font/google"
 import Navigation from "./components/navigation"
+import localFont from "next/font/local"
 
-const inter = Inter({subsets: ["latin"]})
+const font = localFont({
+    src: [
+        {
+            path: "../../public/fonts/ClashDisplay-Regular.woff2",
+            weight: "400",
+            style: "normal",
+        },
+        {
+            path: "../../public/fonts/ClashDisplay-Bold.woff2",
+            weight: "700",
+            style: "normal",
+        },
+    ],
+})
 
 export const metadata: Metadata = {
     title: "Sausage Guide",
@@ -13,7 +26,7 @@ export const metadata: Metadata = {
 export default function RootLayout({children}: {children: React.ReactNode}) {
     return (
         <html lang="en">
-            <body className={inter.className}>
+            <body className={font.className}>
                 <header>
                     <Navigation />
                 </header>

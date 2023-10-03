@@ -31,32 +31,34 @@ export default function Navigation() {
     const pathname = usePathname()
 
     return (
-        <nav className="w-full h-16 fixed bg-[#de9b8a] bottom-0">
-            <ul className="w-full py-2 flex flex-row justify-evenly [&>li]:flex [&>li]:items-center">
-                {linkMap.map((link, index) => (
-                    <li key={index} className="flex items-center">
-                        <Link
-                            href={link.href}
-                            className={
-                                pathname === link.href
-                                    ? "p-2 bg-white rounded-full"
-                                    : "p-2 rounded-full"
-                            }
-                        >
-                            <Image
-                                priority
-                                src={link.icon}
-                                height={32}
-                                width={32}
-                                alt={link.label}
+        <div className="fixed bottom-2 flex w-full justify-center">
+            <nav className="rounded-full h-16 bg-[#de9b8a] px-2">
+                <ul className="py-2 flex flex-row gap-6 [&>li]:flex [&>li]:items-center">
+                    {linkMap.map((link, index) => (
+                        <li key={index} className="flex items-center">
+                            <Link
+                                href={link.href}
                                 className={
-                                    pathname === link.href ? "invert" : ""
+                                    pathname === link.href
+                                        ? "p-2 bg-white rounded-full"
+                                        : "p-2 rounded-full"
                                 }
-                            />
-                        </Link>
-                    </li>
-                ))}
-            </ul>
-        </nav>
+                            >
+                                <Image
+                                    priority
+                                    src={link.icon}
+                                    height={32}
+                                    width={32}
+                                    alt={link.label}
+                                    className={
+                                        pathname === link.href ? "invert" : ""
+                                    }
+                                />
+                            </Link>
+                        </li>
+                    ))}
+                </ul>
+            </nav>
+        </div>
     )
 }
