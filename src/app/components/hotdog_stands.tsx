@@ -22,7 +22,8 @@ export default async function HotdogStands() {
                         height={80}
                         className="rounded-t-md w-full h-40 object-cover"
                     />
-                    <div className="p-4">{stand.name}</div>
+                    <div className="px-4 pt-4 pb-2 font-medium">{stand.name}</div>
+                    <div className="px-4 pb-2">Review {stand.review}</div>
                 </div>
             ))}
         </>

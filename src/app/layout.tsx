@@ -10,10 +10,16 @@ const font = localFont({
             weight: "400",
             style: "normal",
         },
+
+        {
+            path: "../../public/fonts/ClashDisplay-Medium.woff2",
+            weight: "500",
+            style: "bold",
+        },
         {
             path: "../../public/fonts/ClashDisplay-Bold.woff2",
             weight: "700",
-            style: "normal",
+            style: "bold",
         },
     ],
 })
