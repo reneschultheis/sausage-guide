@@ -47,8 +47,8 @@ export default function Navigation() {
                                 <Image
                                     priority
                                     src={link.icon}
-                                    height={22}
-                                    width={22}
+                                    height={26}
+                                    width={26}
                                     alt={link.label}
                                     className={
                                         pathname === link.href ? "invert" : ""
