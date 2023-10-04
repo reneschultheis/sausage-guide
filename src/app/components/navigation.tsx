@@ -32,8 +32,8 @@ export default function Navigation() {
 
     return (
         <div className="fixed bottom-2 flex w-full justify-center">
-            <nav className="rounded-full h-16 bg-[#de9b8a] px-2">
-                <ul className="py-2 flex flex-row gap-6 [&>li]:flex [&>li]:items-center">
+            <nav className="rounded-full bg-gray-400 bg-opacity-60 backdrop-blur-lg px-1">
+                <ul className="py-1 flex flex-row gap-2 [&>li]:flex [&>li]:items-center">
                     {linkMap.map((link, index) => (
                         <li key={index} className="flex items-center">
                             <Link
@@ -47,8 +47,8 @@ export default function Navigation() {
                                 <Image
                                     priority
                                     src={link.icon}
-                                    height={32}
-                                    width={32}
+                                    height={22}
+                                    width={22}
                                     alt={link.label}
                                     className={
                                         pathname === link.href ? "invert" : ""
