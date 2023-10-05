@@ -15,6 +15,7 @@ export default async function HotdogStands() {
                     <div className="text-lg m-2 my-4 rounded-md shadow-black shadow-no-blur bg-gray-200">
                         <Image
                             src={`https://vienna-sausage-gang.pockethost.io/api/files/hotdog_stands/${stand.id}/${stand.preview}`}
+                            quality={100}
                             alt={stand.name}
                             width={100}
                             height={80}
